@@ -1,28 +1,78 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+
+<v-app class="grey lighten-3">
+  <v-main>
+    Mi app de Crowdfunding.hh v content
+
+ <v-container>
+        <v-layout
+          text-xs-center
+          wrap
+        >
+          <v-flex mb-4>
+            <h1 class="display-2 font-weight-bold mb-3">
+              Crowdfunding
+            </h1>
+            <p class="subheading font-weight-regular">
+              Utilizing Ethereum for Decentralized Crowdfunding
+            </p>
+          </v-flex>
+        </v-layout>
+
+         <v-layout row justify-center>
+        <v-dialog v-model="startProjectDialog" max-width="600px" persistent>
+        <v-btn slot="activator" color="primary" dark>Start a Project</v-btn>
+
+
+
+        </v-dialog>
+        </v-layout>
+
+ </v-card>
+
+                </v-container>
+
+
+
+
+
+
+
+
+
+
+
+  </v-main>
+
+
+
+
+
+</v-app>
+
+
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+//import crowdfundInstance from '../contracts/crowdfundInstance';
+
+
+//import crowdfundProject from '../contracts/crowdfundProjectInstance';
+
+//import web3 from '../contracts/web3';
+
+
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  components: {
+ //   HelloWorld,
+  },
+
+  data: () => ({
+    //
+  }),
+};
+</script>
